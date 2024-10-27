@@ -1,1 +1,90 @@
-/Users/fernando.morato/.ideavimrc
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" source ~/.config/nvim/init.lua "" can't source from a lua file
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+"set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+" Disable arrow keys
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+" Set hybrid relative line numbers
+set relativenumber number
+" Set (copy to/paste from) clipboard
+set clipboard+=unnamedplus
+" Keep cursor centered when <C-d> or <C-u>
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+" Keep cursor centered while searching
+noremap n nzzzv
+noremap N Nzzzv
+
+map gd <Action>(GotoDeclaration)
+map gi <Action>(GotoImplementation)
+map gt <Action>(GotoTypeDeclaration)
+map gu <Action>(GotoSuperMethod)
+map <C-O> <Action>(Back)
+map <C-I> <Action>(Forward)
+
+map <C-l> <C-W>l
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+
+map K <Action>(ShowHoverInfo)
+
+let mapleader = "\<space>"
+
+map <space>: <Action>(GotoAction)
+map <space>; <Action>(GotoAction)
+map <space>gf <Action>(GotoFile)
+map <space>rf <Action>(RecentFiles)
+map <space>rp <Action>(ManageRecentProjects)
+
+map <space>sv <Action>(SplitVertically)
+map <space>sh <Action>(SplitHorizontally)
+
+map <space>wh <Action>(HideAllWindows)
+map <space>wc <Action>(CloseContent)
+
+map <space>ri <Action>(OptimizeImports)
+map <space>rr <Action>(Refactorings.QuickListPopupAction)
+map <space>rs <Action>(SurroundWith)
+
+map <space>tn <Action>(GotoTest)
+map <space>tr <Action>(RunClass)
+map <space>tt <Action>(Rerun)
+map <space>tf <Action>(RerunFailedTests)
