@@ -15,14 +15,14 @@ config.window_background_image_hsb = {
 }
 
 config.keys = {
-  { -- Split Vertical
-    key = "s",
-    mods = "CTRL|SHIFT",
+  { -- Split Horizontal
+    key = "-",
+    mods = "CTRL",
     action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
   },
-  { -- Split Horizontal
-    key = "v",
-    mods = "CTRL|SHIFT",
+  { -- Split Vertical
+    key = "\\",
+    mods = "CTRL",
     action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
   },
   -- Move focus to the pane on the left
