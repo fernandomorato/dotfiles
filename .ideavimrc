@@ -16,6 +16,8 @@ set relativenumber number "-> Set hybrid relative line numbers
 set clipboard+=unnamedplus "-> Set (copy to/paste from) clipboard
 set scrolloff=5
 set incsearch
+set termguicolors
+colorscheme kanagawa
 
 " ============== MOTION REMAPS ==============
 " Disable arrow keys
@@ -49,16 +51,19 @@ map <C-I> <Action>(Forward)
 
 map K <Action>(ShowHoverInfo)
 
+" Search
 map <leader>; <Action>(GotoAction)
 map <C-p> <Action>(GotoFile)
 map <leader>rf <Action>(RecentFiles)
 map <leader>rp <Action>(ManageRecentProjects)
+map <leader>lg <Action>(FindInPath) " lg -> Live Grep
 
-map <leader>sv <Action>(SplitVertically)
+map <leader>sv <Action>(SplitVerticall)
 map <leader>sh <Action>(SplitHorizontally)
 
 map <leader>wh <Action>(HideAllWindows)
 map <leader>wc <Action>(CloseContent)
+"map <leader>ft <Action>(ActivateProjectToolWindow) " Not working
 
 map <leader>ri <Action>(OptimizeImports)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
@@ -70,3 +75,4 @@ map <leader>tt <Action>(Rerun)
 map <leader>tf <Action>(RerunFailedTests)
 
 map <leader>dp <Action>(ToggleLineBreakpoint)
+map <leader>dr <Action>(DebugClass)
