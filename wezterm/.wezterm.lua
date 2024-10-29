@@ -51,27 +51,26 @@ config.keys = {
   },
   -- Resize Pane Up
   {
-    key = "K",
+    key = "k",
     mods = "ALT|SHIFT",
-    action = wezterm.action.AdjustPaneSize({ "Up", 1 }),  -- Increase height
+    action = wezterm.action.AdjustPaneSize({ "Up", 5 }),  -- Increase height
   },
   -- Resize Pane Down
   {
-    key = "J",
+    key = "j",
     mods = "ALT|SHIFT",
-    action = wezterm.action.AdjustPaneSize({ "Down", 1 }),  -- Decrease height
+    action = wezterm.action.AdjustPaneSize({ "Down", 5 }),  -- Decrease height
   },
   -- Resize Pane Left
   {
-    key = "H",
+    key = "h",
     mods = "ALT|SHIFT",
-    action = wezterm.action.AdjustPaneSize({ "Left", 1 }),  -- Decrease width
-  },
-  -- Resize Pane Right
+    action = wezterm.action.AdjustPaneSize({ "Left", 5 }),  -- Decrease width
+  }, -- Resize Pane Right
   {
-    key = "L",
+    key = "l",
     mods = "ALT|SHIFT",
-    action = wezterm.action.AdjustPaneSize({ "Right", 1 }),  -- Increase width
+    action = wezterm.action.AdjustPaneSize({ "Right", 5 }),  -- Increase width
   },
 }
 
