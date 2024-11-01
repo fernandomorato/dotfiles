@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "
 local options = {
   relativenumber = true,
   number = true,
+  scrolloff = 5,
 
   tabstop = 2,
   softtabstop = 2,

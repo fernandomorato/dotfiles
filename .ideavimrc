@@ -40,7 +40,13 @@ map <C-l> <C-W>l
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
-
+" Stay in indent mode
+noremap < <gv
+noremap > >gv
+" Create a new line below without entering insert mode
+nnoremap <Leader>o o<Esc>
+" Create a new line above without entering insert mode
+nnoremap <Leader>O O<Esc>
 " ============== ACTION REMAPS ==============
 map gd <Action>(GotoDeclaration)
 map gi <Action>(GotoImplementation)
@@ -56,7 +62,7 @@ map <leader>; <Action>(GotoAction)
 map <C-p> <Action>(GotoFile)
 map <leader>rf <Action>(RecentFiles)
 map <leader>rp <Action>(ManageRecentProjects)
-map <leader>lg <Action>(FindInPath) " lg -> Live Grep
+map <leader>lg <Action>(FindInPath)
 
 map <leader>sv <Action>(SplitVerticall)
 map <leader>sh <Action>(SplitHorizontally)

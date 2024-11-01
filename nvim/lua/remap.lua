@@ -39,3 +39,7 @@ keymap("n", "<C-l>", ":wincmd l<CR>")
 -- Stay in indent mode
 keymap("v", "<", "<gv", { silent = true, noremap = true })
 keymap("v", ">", ">gv", { silent = true, noremap = true })
+-- Create a new line below without entering insert mode
+keymap('n', '<Leader>o', 'o<Esc>', { noremap = true, silent = true })
+-- Create a new line above without entering insert mode
+keymap('n', '<Leader>O', 'O<Esc>', { noremap = true, silent = true })
