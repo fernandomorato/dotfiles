@@ -1,45 +1,47 @@
 local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
 -- Access file system
 -- keymap("n", "<leader>e", vim.cmd.Ex)
 -- Disable Arrow Keys
-keymap("i", "<Up>", "<NOP>", { noremap = true })
-keymap("i", "<Down>", "<NOP>", { noremap = true })
-keymap("i", "<Right>", "<NOP>", { noremap = true })
-keymap("i", "<Left>", "<NOP>", { noremap = true })
-keymap("n", "<Up>", "<NOP>", { noremap = true })
-keymap("n", "<Down>", "<NOP>", { noremap = true })
-keymap("n", "<Right>", "<NOP>", { noremap = true })
-keymap("n", "<Left>", "<NOP>", { noremap = true })
+keymap("i", "<Up>", "<NOP>", opts)
+keymap("i", "<Down>", "<NOP>", opts)
+keymap("i", "<Right>", "<NOP>", opts)
+keymap("i", "<Left>", "<NOP>", opts)
+keymap("n", "<Up>", "<NOP>", opts)
+keymap("n", "<Down>", "<NOP>", opts)
+keymap("n", "<Right>", "<NOP>", opts)
+keymap("n", "<Left>", "<NOP>", opts)
 -- Save file shortcuts
 keymap("n", "<leader>w", ":w<cr>", { desc = "Write", silent = true })
 keymap("n", "<leader>q", ":q<cr>", { desc = "Quit", silent = true })
 keymap("n", "<leader>x", ":x<cr>", { desc = "Write & Quit", silent = true })
 -- Center cursor when <C-d> and <C-u>
-keymap("n", "<C-d>", "<C-d>zz", { noremap = true })
-keymap("n", "<C-u>", "<C-u>zz", { noremap = true })
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
 -- Center cursor while searching
-keymap("n", "n", "nzzzv", { noremap = true })
-keymap("n", "N", "Nzzzv", { noremap = true })
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 -- Save to clipboard
 local nvx = { "n", "v", "x" }
-keymap(nvx, "<leader>d", '"_d', {noremap=true})
-keymap(nvx, "<leader>y", '"+y', {noremap=true})
-keymap(nvx, "<leader>p", '"+p', {noremap=true})
-keymap(nvx, "<leader>P", '"+P', {noremap=true})
+keymap(nvx, "<leader>d", '"_d', opts)
+keymap(nvx, "<leader>y", '"+y', opts)
+keymap(nvx, "<leader>p", '"+p', opts)
+keymap(nvx, "<leader>P", '"+P', opts)
 -- Move window
-keymap("n", "<C-K>", ":wincmd K<CR>")
-keymap("n", "<C-J>", ":wincmd J<CR>")
-keymap("n", "<C-H>", ":wincmd H<CR>")
-keymap("n", "<C-L>", ":wincmd L<CR>")
+keymap("n", "<C-K>", ":wincmd K<CR>", opts)
+keymap("n", "<C-J>", ":wincmd J<CR>", opts)
+keymap("n", "<C-H>", ":wincmd H<CR>", opts)
+keymap("n", "<C-L>", ":wincmd L<CR>", opts)
 -- Easier window navigation
-keymap("n", "<C-h>", ":wincmd h<CR>")
-keymap("n", "<C-j>", ":wincmd j<CR>")
-keymap("n", "<C-k>", ":wincmd k<CR>")
-keymap("n", "<C-l>", ":wincmd l<CR>")
+keymap("n", "<C-h>", ":wincmd h<CR>", opts)
+keymap("n", "<C-j>", ":wincmd j<CR>", opts)
+keymap("n", "<C-k>", ":wincmd k<CR>", opts)
+keymap("n", "<C-l>", ":wincmd l<CR>", opts)
 -- Stay in indent mode
-keymap("v", "<", "<gv", { silent = true, noremap = true })
-keymap("v", ">", ">gv", { silent = true, noremap = true })
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 -- Create a new line below without entering insert mode
-keymap('n', '<Leader>o', 'o<Esc>', { noremap = true, silent = true })
+keymap("n", "<Leader>o", "o<Esc>", opts)
 -- Create a new line above without entering insert mode
-keymap('n', '<Leader>O', 'O<Esc>', { noremap = true, silent = true })
+keymap("n", "<Leader>O", "O<Esc>", opts)
+keymap("n", "x", '"_x', opts)

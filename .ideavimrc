@@ -10,14 +10,16 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 
 "" ================ OPTIONS ================
-let mapleader = "\<space>"
+let mapleader=" "
 
 set relativenumber number "-> Set hybrid relative line numbers
 set clipboard+=unnamedplus "-> Set (copy to/paste from) clipboard
+set clipboard+=ideaput
 set scrolloff=5
 set incsearch
+set showmode
 set termguicolors
-colorscheme kanagawa
+colorscheme gruvbox
 
 " ============== MOTION REMAPS ==============
 " Disable arrow keys
@@ -40,6 +42,8 @@ map <C-l> <C-W>l
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
+" Better redo
+map U <C-R>
 " Stay in indent mode
 noremap < <gv
 noremap > >gv
@@ -47,6 +51,9 @@ noremap > >gv
 nnoremap <Leader>o o<Esc>
 " Create a new line above without entering insert mode
 nnoremap <Leader>O O<Esc>
+" ~/.ideavimrc
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
 " ============== ACTION REMAPS ==============
 map gd <Action>(GotoDeclaration)
 map gi <Action>(GotoImplementation)
@@ -59,10 +66,10 @@ map K <Action>(ShowHoverInfo)
 
 " Search
 map <leader>; <Action>(GotoAction)
-map <C-p> <Action>(GotoFile)
-map <leader>rf <Action>(RecentFiles)
-map <leader>rp <Action>(ManageRecentProjects)
-map <leader>lg <Action>(FindInPath)
+map <leader>sf <Action>(GotoFile)
+map <leader>s. <Action>(RecentFiles)
+map <leader>sp <Action>(ManageRecentProjects)
+map <leader>sg <Action>(FindInPath)
 
 map <leader>sv <Action>(SplitVerticall)
 map <leader>sh <Action>(SplitHorizontally)
