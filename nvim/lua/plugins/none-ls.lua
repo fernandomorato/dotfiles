@@ -9,6 +9,7 @@ return {
 					null_ls.builtins.formatting.black, -- Python formatting
 					null_ls.builtins.formatting.isort, -- Python imports formatting
 					null_ls.builtins.formatting.gofumpt, -- Go formatting
+          null_ls.builtins.formatting.goimports_reviser,
 					null_ls.builtins.diagnostics.golangci, -- Go Lint
 				},
 			})

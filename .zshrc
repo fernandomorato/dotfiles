@@ -18,7 +18,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws)
+plugins=(git aws kubectl docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,13 +40,32 @@ fi
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 alias gw='./gradlew'
+alias k='kubectl'
+alias fzf='fzf | xargs nvim'
+
+# go private
+export GOPRIVATE=github.com/inloco
+
+# kubectl plugins
+export PATH=$PATH:$HOME/.kubectl-plugins
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# vault
+export VAULT_ADDR=https://vault.incognia.tech
+
+
+# Created by `pipx` on 2025-01-02 19:26:45
+export PATH="$PATH:/Users/fernando.morato/.local/bin"
+export NOTES="~/.notes"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH=$PATH:$HOME/go/bin
 
-# pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# Changing man pager to neovim
+export MANPAGER='nvim +Man!'

@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 -- Color Scheme
 config.color_scheme = "Gruvbox Material (Gogh)"
 config.font = wezterm.font("MesloLGL Nerd Font")
-config.font_size = 12
+config.font_size = 15
 
 -- Tab bar
 config.enable_tab_bar = false
@@ -20,16 +20,16 @@ config.window_background_image_hsb = {
 }
 
 config.keys = {
-  { -- Split Horizontal
-    key = "-",
-    mods = "CTRL",
-    action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-  },
-  { -- Split Vertical
-    key = "\\",
-    mods = "CTRL",
-    action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-  },
+  -- { -- Split Horizontal
+  --   key = "-",
+  --   mods = "CTRL",
+  --   action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+  -- },
+  -- { -- Split Vertical
+  --   key = "\\",
+  --   mods = "CTRL",
+  --   action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+  -- },
   -- Move focus to the pane on the left
   {
     key = "h",

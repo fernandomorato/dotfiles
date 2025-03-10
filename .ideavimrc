@@ -71,7 +71,7 @@ map <leader>s. <Action>(RecentFiles)
 map <leader>sp <Action>(ManageRecentProjects)
 map <leader>sg <Action>(FindInPath)
 
-map <leader>sv <Action>(SplitVerticall)
+map <leader>sv <Action>(SplitVertically)
 map <leader>sh <Action>(SplitHorizontally)
 
 map <leader>wh <Action>(HideAllWindows)
@@ -89,3 +89,6 @@ map <leader>tf <Action>(RerunFailedTests)
 
 map <leader>dp <Action>(ToggleLineBreakpoint)
 map <leader>dr <Action>(DebugClass)
+
+" group later
+map <leader>df <Action>(ToggleDistractionFreeMode)
