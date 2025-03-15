@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Maybe use a environment variable for the list of repositories to search
 selected_session=$(find $HOME $HOME/work $HOME/personal -mindepth 1 -maxdepth 1 -type d | fzf)
