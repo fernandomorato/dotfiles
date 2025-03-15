@@ -1,5 +1,7 @@
+#!/usr/bin/bash
+
 # Maybe use a environment variable for the list of repositories to search
-selected_session=$(find $HOME/Workspace $HOME/personal $HOME -mindepth 1 -maxdepth 1 -type d | fzf)
+selected_session=$(find $HOME $HOME/work $HOME/personal -mindepth 1 -maxdepth 1 -type d | fzf)
 if [[ -z $selected_session ]]; then
   exit 0
 fi

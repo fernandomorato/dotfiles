@@ -2,10 +2,17 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- Always start in fullscreen
+local mux = wezterm.mux
+wezterm.on("gui-startup", function()
+  local tab, pane, window = mux.spawn_window{}
+  window:gui_window():maximize()
+end)
+
 -- Color Scheme
 config.color_scheme = "Gruvbox Material (Gogh)"
 config.font = wezterm.font("MesloLGL Nerd Font")
-config.font_size = 15
+config.font_size = 13
 
 -- Tab bar
 config.enable_tab_bar = false

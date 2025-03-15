@@ -22,6 +22,9 @@ plugins=(git aws kubectl docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
+# My scripts
+export PATH="$HOME/.local/bin/:$PATH"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -50,9 +53,9 @@ export GOPRIVATE=github.com/inloco
 export PATH=$PATH:$HOME/.kubectl-plugins
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
 
 # vault
 export VAULT_ADDR=https://vault.incognia.tech
