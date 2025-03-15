@@ -41,7 +41,7 @@ fi
 # For a full list of active aliases, run `alias`.
 alias gw='./gradlew'
 alias k='kubectl'
-alias fzf='fzf | xargs nvim'
+# alias fzf='fzf | xargs nvim'
 
 # go private
 export GOPRIVATE=github.com/inloco
@@ -57,11 +57,6 @@ eval "$(pyenv init -)"
 # vault
 export VAULT_ADDR=https://vault.incognia.tech
 
-
-# Created by `pipx` on 2025-01-02 19:26:45
-export PATH="$PATH:/Users/fernando.morato/.local/bin"
-export NOTES="~/.notes"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -69,3 +64,9 @@ export PATH=$PATH:$HOME/go/bin
 
 # Changing man pager to neovim
 export MANPAGER='nvim +Man!'
+
+# Setting aws profile
+export AWS_PROFILE=incognia-production-product
+
+# Notes (maybe remove this)
+export NOTES="~/.notes"
