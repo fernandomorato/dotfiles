@@ -2,6 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local options = {
+  guicursor = '',
   relativenumber = true,
   number = true,
   scrolloff = 5,
