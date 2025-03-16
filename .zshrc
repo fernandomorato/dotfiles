@@ -73,3 +73,6 @@ export AWS_PROFILE=incognia-production-product
 
 # Notes (maybe remove this)
 export NOTES="~/.notes"
+
+# Setting config path
+export XDG_CONFIG_HOME="$HOME/.config"
