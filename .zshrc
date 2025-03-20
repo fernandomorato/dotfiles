@@ -60,11 +60,6 @@ export PATH=$PATH:$HOME/.kubectl-plugins
 # vault
 export VAULT_ADDR=https://vault.incognia.tech
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH=$PATH:$HOME/go/bin
-
 # Changing man pager to neovim
 export MANPAGER='nvim +Man!'
 
@@ -76,3 +71,12 @@ export NOTES="~/.notes"
 
 # Setting config path
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH=$PATH:$HOME/go/bin
+
