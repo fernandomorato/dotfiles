@@ -40,8 +40,11 @@ keymap("n", "<C-l>", ":wincmd l<CR>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
--- Create a new line below without entering insert mode
+-- Create a new line below/above without entering insert mode
 keymap("n", "<Leader>o", "o<Esc>", opts)
--- Create a new line above without entering insert mode
 keymap("n", "<Leader>O", "O<Esc>", opts)
+-- Make x not save to buffer
 keymap("n", "x", '"_x', opts)
+-- Move lines up and down
+keymap("v", "<C-k>", "dkPV", opts)
+keymap("v", "<C-j>", "dpV", opts)
