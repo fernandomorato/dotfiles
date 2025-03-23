@@ -1,12 +1,13 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 -- Access file system
+keymap("n", "x", '"_x', opts)
 -- keymap("n", "<leader>e", vim.cmd.Ex)
 -- Disable Arrow Keys
-keymap("i", "<Up>", "<NOP>", opts)
 keymap("i", "<Down>", "<NOP>", opts)
 keymap("i", "<Right>", "<NOP>", opts)
 keymap("i", "<Left>", "<NOP>", opts)
+keymap("i", "<Up>", "<NOP>", opts)
 keymap("n", "<Up>", "<NOP>", opts)
 keymap("n", "<Down>", "<NOP>", opts)
 keymap("n", "<Right>", "<NOP>", opts)
@@ -43,8 +44,8 @@ keymap("v", ">", ">gv", opts)
 -- Create a new line below/above without entering insert mode
 keymap("n", "<Leader>o", "o<Esc>", opts)
 keymap("n", "<Leader>O", "O<Esc>", opts)
--- Make x not save to buffer
+-- Send x to blackhole
 keymap("n", "x", '"_x', opts)
 -- Move lines up and down
-keymap("v", "<C-k>", "dkPV", opts)
-keymap("v", "<C-j>", "dpV", opts)
+keymap("v", "<C-k>", ":'<,'>m '<-2<CR>gv=gv", opts)
+keymap("v", "<C-j>", ":'<,'>m '>+1<CR>gv=gv", opts)
