@@ -11,8 +11,17 @@ end)
 
 -- Color Scheme
 config.color_scheme = "Gruvbox Material (Gogh)"
+
+-- Font
 config.font = wezterm.font("MesloLGL Nerd Font")
-config.font_size = 13
+local target = wezterm.target_triple
+
+-- Set font size based on platform
+if target:find("apple") then
+  config.font_size = 23.0  -- macOS
+else
+  config.font_size = 12.5  -- Linux, default
+end
 
 -- Tab bar
 config.enable_tab_bar = false
