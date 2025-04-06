@@ -22,3 +22,12 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+
+vim.diagnostic.config({
+  virtual_text = true, -- Disable virtual text
+  float = {
+    border = "rounded",  -- Set border style
+    source = "cursor",  -- Show diagnostics when cursor is on a line with an error
+  }
+})
