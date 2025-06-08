@@ -41,12 +41,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# Pulse Audio controls
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
-# Sreen brightness controls
+# Screen brightness controls
 bindsym XF86MonBrightnessUp exec brightnessctl set 10%+ # increase screen brightness
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- # decrease screen brightness
 
@@ -107,7 +102,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -204,3 +199,7 @@ bindsym $mod+shift+x exec i3lock
 
 # Set wallpaper
 exec_always feh --bg-scale ~/Pictures/vagabond-2.jpg
+
+# Binding scripts of each screen
+bindsym $mod+F1 exec ~/.config/arandr/native.sh
+bindsym $mod+F2 exec ~/.config/arandr/dell.sh
