@@ -20,7 +20,7 @@ local target = wezterm.target_triple
 if target:find("apple") then
   config.font_size = 23.0  -- macOS
 else
-  config.font_size = 12.5  -- Linux, default
+  config.font_size = 15.0  -- Linux, default
 end
 
 -- Tab bar
@@ -30,7 +30,7 @@ config.window_decorations = "RESIZE"
 -- Window Background
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 10
-config.window_background_image = os.getenv("HOME") .. "/.dotfiles/wezterm/background/vagabond-2.jpg"
+config.window_background_image = os.getenv("HOME") .. "/.config/wezterm/background/vagabond-2.jpg"
 config.window_background_image_hsb = {
   brightness = 0.01, -- Float in range [0, 1]. The bigger, the brighter
 }
