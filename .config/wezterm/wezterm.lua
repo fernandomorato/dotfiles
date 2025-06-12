@@ -18,7 +18,7 @@ local target = wezterm.target_triple
 
 -- Set font size based on platform
 if target:find("apple") then
-  config.font_size = 23.0  -- macOS
+  config.font_size = 20.0  -- macOS
 else
   config.font_size = 15.0  -- Linux, default
 end
