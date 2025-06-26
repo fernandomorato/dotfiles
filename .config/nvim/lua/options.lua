@@ -22,22 +22,3 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
-
--- Setting diagnostics floating window
-
-vim.o.updatetime = 300  -- milliseconds
-
-vim.diagnostic.config({
-  virtual_text = false,  -- Disable virtual text
-  float = {
-    border = "rounded",
-    source = "always",  -- Always show the source
-  },
-})
-
--- Show diagnostics automatically in a floating window on CursorHold
-vim.api.nvim_create_autocmd("CursorHold", {
-  callback = function()
-    vim.diagnostic.open_float(nil, { focus = false })
-  end,
-})
