@@ -1,7 +1,7 @@
 -- ~/.config/nvim/lua
+--
 local autocmd = vim.api.nvim_create_autocmd
 -- Highlight yanked text
-
 local function highlight_yank()
 	vim.highlight.on_yank({
 		higroup = "IncSearch",

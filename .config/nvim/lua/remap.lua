@@ -2,7 +2,6 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 -- Access file system
 keymap("n", "x", '"_x', opts)
--- keymap("n", "<leader>e", vim.cmd.Ex)
 -- Disable Arrow Keys
 keymap("i", "<Down>", "<NOP>", opts)
 keymap("i", "<Right>", "<NOP>", opts)
